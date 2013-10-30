@@ -1,0 +1,22 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {1EEE1EA2-BCEA-4383-ADBC-EF7D99CE8751} = s 'ResizableTest Class'
+		{
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove Control
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 106'
+			MiscStatus = s '0'
+			{
+			    '1' = s '%OLEMISC%'
+			}
+			TypeLib = s '{3F353E6A-0C99-40A3-98DA-9A3FAA685C61}'
+			Version = s '1.0'
+		}
+	}
+}

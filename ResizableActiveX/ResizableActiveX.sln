@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ResizableActiveX", "ResizableActiveX.vcxproj", "{904C4C82-4D0F-4089-A180-C708F69F5762}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ResizableActiveXPS", "ResizableActiveXPS.vcxproj", "{7A30480A-48A6-440A-BFAE-A0D2D58610AF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{904C4C82-4D0F-4089-A180-C708F69F5762} = {904C4C82-4D0F-4089-A180-C708F69F5762}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{904C4C82-4D0F-4089-A180-C708F69F5762}.Debug|Win32.ActiveCfg = Debug|Win32
+		{904C4C82-4D0F-4089-A180-C708F69F5762}.Debug|Win32.Build.0 = Debug|Win32
+		{904C4C82-4D0F-4089-A180-C708F69F5762}.Release|Win32.ActiveCfg = Release|Win32
+		{904C4C82-4D0F-4089-A180-C708F69F5762}.Release|Win32.Build.0 = Release|Win32
+		{7A30480A-48A6-440A-BFAE-A0D2D58610AF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7A30480A-48A6-440A-BFAE-A0D2D58610AF}.Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

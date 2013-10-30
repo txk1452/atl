@@ -1,0 +1,45 @@
+// ResizableActiveX.idl : IDL source for ResizableActiveX
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ResizableActiveX.tlb) and marshalling code.
+
+#include "olectl.h"
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(911924F2-02BB-4776-9164-51619209FCFB),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IResizableTest : IDispatch{
+	[propput, bindable, requestedit, id(DISPID_AUTOSIZE)]
+	HRESULT AutoSize([in]VARIANT_BOOL vbool);
+	[propget, bindable, requestedit, id(DISPID_AUTOSIZE)]
+	HRESULT AutoSize([out,retval]VARIANT_BOOL* pbool);
+	[propput, bindable, requestedit, id(DISPID_TABSTOP)]
+	HRESULT TabStop([in]VARIANT_BOOL vbool);
+	[propget, bindable, requestedit, id(DISPID_TABSTOP)]
+	HRESULT TabStop([out, retval]VARIANT_BOOL* pbool);
+};
+
+[
+	uuid(3F353E6A-0C99-40A3-98DA-9A3FAA685C61),
+	version(1.0),
+]
+library ResizableActiveXLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(1EEE1EA2-BCEA-4383-ADBC-EF7D99CE8751),		
+		control
+	]
+	coclass ResizableTest
+	{
+		[default] interface IResizableTest;
+	};
+};
+
